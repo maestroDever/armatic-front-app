@@ -4,6 +4,7 @@ import {
   TextField,
   MenuItem,
   Paper,
+  Button,
   Table,
   TableHead,
   TableBody,
@@ -11,6 +12,7 @@ import {
   TableRow,
 } from "@material-ui/core";
 import { MuiPickersUtilsProvider } from "@material-ui/pickers";
+import CloudUploadIcon from "@material-ui/icons/CloudUpload";
 import DateFnsUtils from "@date-io/date-fns";
 import { KeyboardDatePicker } from "@material-ui/pickers";
 // styles
@@ -24,26 +26,31 @@ export default function BillFormsPage() {
   const [selectedDate, setSelectedDate] = React.useState(
     new Date("2014-08-18T21:11:54"),
   );
+  const [currency, setCurrency] = React.useState("");
 
   const handleDateChange = date => {
     setSelectedDate(date);
   };
+  const handleChange = event => {
+    setCurrency(event.target.value);
+  };
+
   const currencies = [
     {
       value: "USD",
-      label: "$",
+      label: "$ (USD)",
     },
     {
       value: "EUR",
-      label: "€",
+      label: "€ (EUR)",
     },
     {
       value: "BTC",
-      label: "฿",
+      label: "฿ (BTC)",
     },
     {
       value: "JPY",
-      label: "¥",
+      label: "¥ (JPY)",
     },
   ];
 
@@ -114,6 +121,9 @@ export default function BillFormsPage() {
               </Grid>
               <Grid item xs={12} md={4}>
                 <MuiPickersUtilsProvider utils={DateFnsUtils}>
+                  <div align="right">
+                    <Button variant="contained">Save</Button>
+                  </div>
                   <div>
                     <TextField
                       id="bill_no"
@@ -170,6 +180,7 @@ export default function BillFormsPage() {
                       id="bill_currency"
                       select
                       label="Select"
+                      value={currency}
                       className={classes.textField}
                       style={{ width: "100%" }}
                       SelectProps={{
@@ -177,6 +188,7 @@ export default function BillFormsPage() {
                           className: classes.menu,
                         },
                       }}
+                      onChange={handleChange}
                       helperText="Please select your currency"
                       margin="normal"
                     >
@@ -216,11 +228,23 @@ export default function BillFormsPage() {
               ))}
               <TableRow>
                 <TableCell colSpan={2}></TableCell>
-                <TableCell>Total Amount</TableCell>
-                <TableCell>{summary}</TableCell>
+                <TableCell className={classes.boldSummary}>
+                  Total Amount
+                </TableCell>
+                <TableCell className={classes.boldSummary}>{summary}</TableCell>
               </TableRow>
             </TableBody>
           </Table>
+          <div align="right">
+            <Button
+              variant="contained"
+              color="primary"
+              className={classes.uploadButton}
+            >
+              <CloudUploadIcon className={classes.leftIcon} />
+              Upload Invoice
+            </Button>
+          </div>
         </Paper>
       </Grid>
     </Grid>

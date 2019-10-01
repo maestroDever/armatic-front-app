@@ -1,9 +1,11 @@
 import React from "react";
-import { Grid } from "@material-ui/core";
+import { Grid, Button } from "@material-ui/core";
 import MUIDataTable from "mui-datatables";
-
+import ListAltIcon from "@material-ui/icons/ListAlt";
 // components
 import PageTitle from "../../components/PageTitle/PageTitle";
+// styles
+import useStyles from "./styles";
 
 const datatableData = [
   ["HD-1201", "2019-09-28", 101, "Rahul Dravid", "Compensation", 100000, "INR"],
@@ -20,6 +22,7 @@ const datatableData = [
 ];
 
 export default function Tables() {
+  var classes = useStyles();
   return (
     <>
       <PageTitle title="Month - Sep 19" />
@@ -42,7 +45,16 @@ export default function Tables() {
             }}
           />
         </Grid>
-        <Grid item xs={12}></Grid>
+        <Grid item xs={12} align="right">
+          <Button
+            variant="contained"
+            color="primary"
+            className={classes.formatButton}
+          >
+            <ListAltIcon className={classes.leftIcon} />
+            Sample Format
+          </Button>
+        </Grid>
       </Grid>
     </>
   );

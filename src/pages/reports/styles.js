@@ -21,4 +21,13 @@ export default makeStyles(theme => ({
     overflow: "hidden",
     paddingBottom: theme.spacing(2),
   },
+  downloadButton: {
+    margin: theme.spacing(4),
+  },
+  leftIcon: {
+    marginRight: theme.spacing(1),
+  },
+  rightIcon: {
+    marginLeft: theme.spacing(1),
+  },
 }));

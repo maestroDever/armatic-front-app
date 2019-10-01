@@ -2,10 +2,11 @@ import React, { useState, useEffect } from "react";
 import { Drawer, IconButton, List } from "@material-ui/core";
 import {
   Home as HomeIcon,
-  FormatSize as TypographyIcon,
   FilterNone as UIElementsIcon,
-  BorderAll as TableIcon,
+  Drafts as DraftsIcon,
+  AccountBalanceWallet as AccountBalanceWalletOutlinedIcon,
   ArrowBack as ArrowBackIcon,
+  Assignment as AssignmentOutlinedIcon,
 } from "@material-ui/icons";
 import { useTheme } from "@material-ui/styles";
 import { withRouter } from "react-router-dom";
@@ -26,37 +27,48 @@ import {
 } from "../../context/LayoutContext";
 
 const structure = [
-  { id: 0, label: "Dashboard", link: "/app/dashboard", icon: <HomeIcon /> },
+  { id: 0, label: "Overview", link: "/app/dashboard", icon: <HomeIcon /> },
   {
     id: 1,
-    label: "Bill Forms",
-    link: "/app/billforms",
-    icon: <TypographyIcon />,
+    label: "Inbox (10)",
+    link: "/app/inbox",
+    icon: <DraftsIcon />,
   },
-  { id: 2, label: "Bill Update", link: "/app/billupdate", icon: <TableIcon /> },
   {
-    id: 3,
+    id: 2,
     label: "Additional Reports",
     link: "/app/report",
     icon: <UIElementsIcon />,
   },
-  { id: 4, type: "divider" },
-  { id: 5, type: "title", label: "PROJECTS" },
   {
-    id: 6,
-    label: "My recent",
+    id: 3,
+    label: "Bill Forms",
+    link: "/app/billforms",
+    icon: <AccountBalanceWalletOutlinedIcon />,
+  },
+  {
+    id: 4,
+    label: "Bill Update",
+    link: "/app/billupdate",
+    icon: <AssignmentOutlinedIcon />,
+  },
+  { id: 5, type: "divider" },
+  { id: 6, type: "title", label: "Recents" },
+  {
+    id: 7,
+    label: "Report 1",
     link: "",
     icon: <Dot size="large" color="warning" />,
   },
   {
-    id: 7,
-    label: "Starred",
+    id: 8,
+    label: "Report 2",
     link: "",
     icon: <Dot size="large" color="primary" />,
   },
   {
-    id: 8,
-    label: "Background",
+    id: 9,
+    label: "Report 3",
     link: "",
     icon: <Dot size="large" color="secondary" />,
   },

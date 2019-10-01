@@ -8,10 +8,12 @@ import {
   Paper,
   Typography,
   Grid,
+  Button,
 } from "@material-ui/core";
 
 // styles
 import useStyles from "./styles";
+import CloudDownloadIcon from "@material-ui/icons/CloudDownload";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import Widget from "../../components/Widget";
 
@@ -111,6 +113,16 @@ export default function ReportPage() {
                 )}
               </TableBody>
             </Table>
+            <div align="right">
+              <Button
+                variant="contained"
+                color="primary"
+                className={classes.downloadButton}
+              >
+                <CloudDownloadIcon className={classes.leftIcon} />
+                Download Report
+              </Button>
+            </div>
           </Paper>
         </Grid>
       </Grid>
