@@ -1,7 +1,8 @@
 import React from "react";
-import { Grid, Button } from "@material-ui/core";
+import { Grid, Button, Paper, Typography } from "@material-ui/core";
 import MUIDataTable from "mui-datatables";
 import ListAltIcon from "@material-ui/icons/ListAlt";
+import CloudUploadIcon from "@material-ui/icons/CloudUpload";
 // components
 import PageTitle from "../../components/PageTitle/PageTitle";
 // styles
@@ -25,8 +26,20 @@ export default function Tables() {
   var classes = useStyles();
   return (
     <>
-      <PageTitle title="Month - Sep 19" />
+      <PageTitle title="Upload Excel Data For the Invoice" />
+
       <Grid container spacing={4}>
+        <Grid item xs={12}>
+          <Paper className={classes.paper}>
+            <Typography className={classes.paperText} variant="h6" size="sm">
+              Excel Upload has to be in attached format
+            </Typography>
+            <Button variant="contained" color="primary">
+              <CloudUploadIcon className={classes.leftIcon} />
+              Upload Excel
+            </Button>
+          </Paper>
+        </Grid>
         <Grid item xs={12}>
           <MUIDataTable
             title="Employee List"

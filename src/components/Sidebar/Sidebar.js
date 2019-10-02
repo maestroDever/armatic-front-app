@@ -36,7 +36,7 @@ const structure = [
   },
   {
     id: 2,
-    label: "Additional Reports",
+    label: "Additions Reports",
     link: "/app/report",
     icon: <UIElementsIcon />,
   },

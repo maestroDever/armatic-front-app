@@ -10,7 +10,7 @@ export default makeStyles(theme => ({
     borderBottomColor: theme.palette.text.hint + "80",
   },
   paper: {
-    padding: theme.spacing(4),
+    padding: theme.spacing(1),
   },
   materialIconText: {
     marginLeft: theme.spacing(2),
@@ -23,6 +23,11 @@ export default makeStyles(theme => ({
   },
   downloadButton: {
     margin: theme.spacing(4),
+    padding: theme.spacing(2),
+  },
+  csvLink: {
+    textDecoration: "none",
+    color: theme.palette.common.white,
   },
   leftIcon: {
     marginRight: theme.spacing(1),

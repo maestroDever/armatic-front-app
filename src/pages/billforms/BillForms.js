@@ -90,28 +90,29 @@ export default function BillFormsPage() {
                     component="h4"
                     colorBrightness="secondary"
                   >
-                    Velocity
+                    Velocity Global
                   </Typography>
                 </div>
                 <div className={classes.text}>
                   <Typography color="text" colorBrightness="secondary">
-                    Flat No 401
+                    Office No 84
                   </Typography>
                 </div>
                 <div className={classes.text}>
                   <Typography color="text" colorBrightness="secondary">
-                    Dubai, dubai, 5300002
+                    One JLT Building
                   </Typography>
                 </div>
                 <div className={classes.text}>
                   <Typography color="text" colorBrightness="secondary">
-                    United Arab Emirate
+                    Dubai, UAE
                   </Typography>
                 </div>
                 <div className={classes.text}>
                   <TextField
                     id="vendor"
                     label="Vendor"
+                    value="Both"
                     className={classes.textField}
                     style={{ width: "60%" }}
                     placeholder="Vendor description"

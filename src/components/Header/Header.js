@@ -41,7 +41,7 @@ export default function Header(props) {
   var [isSearchOpen, setSearchOpen] = useState(false);
 
   return (
-    <AppBar position="fixed" className={classes.appBar} color="success">
+    <AppBar position="fixed" className={classes.appBar}>
       <Toolbar className={classes.toolbar}>
         <IconButton
           color="inherit"
@@ -72,7 +72,7 @@ export default function Header(props) {
           )}
         </IconButton>
         <Typography variant="h6" weight="medium" className={classes.logotype}>
-          Armatic App
+          Velocity Global - Pega
         </Typography>
         <div className={classes.grow} />
         <div

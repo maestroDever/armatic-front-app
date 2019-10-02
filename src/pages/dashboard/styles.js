@@ -67,50 +67,8 @@ export default makeStyles(theme => ({
     alignItems: "center",
     maxWidth: "100%",
   },
-  serverOverviewElementText: {
-    minWidth: 145,
-    paddingRight: theme.spacing(2),
-  },
-  serverOverviewElementChartWrapper: {
-    width: "100%",
-  },
-  mainChartBody: {
-    overflowX: "auto",
-  },
-  mainChartHeader: {
-    width: "100%",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "space-between",
-    [theme.breakpoints.only("xs")]: {
-      flexWrap: "wrap",
-    },
-  },
-  mainChartHeaderLabels: {
-    display: "flex",
-    alignItems: "center",
-    [theme.breakpoints.only("xs")]: {
-      order: 3,
-      width: "100%",
-      justifyContent: "center",
-      marginTop: theme.spacing(3),
-      marginBottom: theme.spacing(2),
-    },
-  },
-  mainChartHeaderLabel: {
-    display: "flex",
-    alignItems: "center",
-    marginLeft: theme.spacing(3),
-  },
-  mainChartSelectRoot: {
-    borderColor: theme.palette.text.hint + "80 !important",
-  },
-  mainChartSelect: {
-    padding: 10,
-    paddingRight: 25,
-  },
-  mainChartLegentElement: {
-    fontSize: "18px !important",
-    marginLeft: theme.spacing(1),
+  invoiceText: {
+    paddingTop: theme.spacing(1),
+    paddingBottom: theme.spacing(1),
   },
 }));
